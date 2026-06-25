@@ -4,7 +4,7 @@
 
 ```text
 figures/    # 压缩后的图表、截图，适合直接嵌入 README
-videos/     # 短视频片段，适合在 README 中链接或嵌入
+videos/     # 短视频片段和 GIF 预览，适合在 README 中展示或链接
 ```
 
 当前素材：
@@ -16,8 +16,10 @@ figures/SAC_tb1.png
 figures/SAC_tb2.png
 videos/PPO.mp4
 videos/SAC.mp4
+videos/PPO_preview.gif
+videos/SAC_preview.gif
 ```
 
 `SAC_tb1.png` 当前与 `PPO_tb2.png` 内容相同，暂不在根 README 中展示；如有正确的 SAC 图表，可以替换该文件或新增更明确的文件名。
 
-`results/` 用于保存文字、表格和指标摘要，不建议放图片或视频。完整训练视频、TensorBoard event、raw log、checkpoint 和 replay buffer 不纳入版本管理。
+根 README 使用 GIF 预览展示策略 rollout，点击预览图可打开对应 mp4。`results/` 用于保存文字、表格和指标摘要，不建议放图片或视频。完整训练视频、TensorBoard event、raw log、checkpoint 和 replay buffer 不纳入版本管理。

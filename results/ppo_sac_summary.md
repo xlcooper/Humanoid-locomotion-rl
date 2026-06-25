@@ -85,6 +85,8 @@ assets/figures/PPO_tb2.png
 assets/figures/SAC_tb2.png
 assets/videos/PPO.mp4
 assets/videos/SAC.mp4
+assets/videos/PPO_preview.gif
+assets/videos/SAC_preview.gif
 ```
 
 `assets/figures/SAC_tb1.png` 当前与 `PPO_tb2.png` 内容相同，暂不作为结果图展示。完整训练视频、TensorBoard event 和 raw log 不纳入版本管理。
