@@ -1,11 +1,10 @@
-# 展示素材
+# Assets
 
-该目录保存 README 和项目报告中引用的图表与短视频。
+本目录用于存放 README 或展示页面引用的小体积素材。
 
 ```text
-figures/ppo_final_seed1_tensorboard.png
-figures/sac_1m_seed0_tensorboard.png
-videos/sac_1m_seed0_episode_003.mp4
+figures/    # 压缩后的图表、截图
+videos/     # 短视频片段或轻量预览
 ```
 
-完整训练视频、TensorBoard event 和 raw log 不纳入仓库。
+当前仓库仅保留目录结构，不包含实际图片或视频文件。完整训练视频、TensorBoard event、raw log、checkpoint 和 replay buffer 不纳入版本管理。

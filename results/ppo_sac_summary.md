@@ -77,15 +77,4 @@ mean_length=1000.000
 
 ## 展示素材
 
-TensorBoard 截图路径：
-
-```text
-assets/figures/ppo_final_seed1_tensorboard.png
-assets/figures/sac_1m_seed0_tensorboard.png
-```
-
-视频路径：
-
-```text
-assets/videos/sac_1m_seed0_episode_003.mp4
-```
+`assets/figures/` 与 `assets/videos/` 仅保留展示素材的占位目录。当前仓库不包含实际截图或视频文件；完整训练视频、TensorBoard event 和 raw log 不纳入版本管理。
