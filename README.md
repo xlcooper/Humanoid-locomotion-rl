@@ -95,20 +95,12 @@ SAC seed `0` 的 10 个 evaluation episode 全部达到 `1000` step 时间上限
 
 ### Rollout Videos
 
-<table>
-  <tr>
-    <td width="50%">
-      <strong>PPO</strong><br>
-      <video src="assets/videos/PPO.mp4" controls width="100%"></video><br>
-      <a href="assets/videos/PPO.mp4">Open PPO.mp4</a>
-    </td>
-    <td width="50%">
-      <strong>SAC</strong><br>
-      <video src="assets/videos/SAC.mp4" controls width="100%"></video><br>
-      <a href="assets/videos/SAC.mp4">Open SAC.mp4</a>
-    </td>
-  </tr>
-</table>
+| Policy | Video |
+| --- | --- |
+| PPO | [Open PPO rollout video](assets/videos/PPO.mp4) |
+| SAC | [Open SAC rollout video](assets/videos/SAC.mp4) |
+
+GitHub 对 README 内嵌视频的支持不如图片稳定；因此这里使用普通链接，保证在仓库页面、移动端和 Markdown 预览中都能访问。
 
 ## 仓库结构
 
