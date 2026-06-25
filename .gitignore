@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.env
+.venv/
+venv/
+env/
+
+# Training artifacts
+/runs/
+/checkpoints/
+/tensorboard/
+/rendered/
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.pkl
+events.out.tfevents*
+*.log
+
+# Large raw outputs
+replay_buffer*
+monitor.monitor.csv
+metrics.csv
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

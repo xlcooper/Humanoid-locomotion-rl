@@ -1,0 +1,13 @@
+gymnasium-robotics
+mujoco
+pettingzoo
+numpy
+torch
+tensorboard
+tqdm
+matplotlib
+pandas
+pytest
+imageio
+imageio-ffmpeg
+stable-baselines3
