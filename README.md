@@ -102,19 +102,17 @@ SAC seed `0` 的 10 个 evaluation episode 全部达到 `1000` step 时间上限
       <a href="assets/videos/PPO.mp4">
         <img src="assets/videos/PPO_preview.gif" alt="PPO policy rollout preview">
       </a><br>
-      <a href="assets/videos/PPO.mp4">Open PPO.mp4</a>
+      <a href="assets/videos/PPO.mp4">Watch full PPO rollout</a>
     </td>
     <td width="50%">
       <strong>SAC rollout preview</strong><br>
       <a href="assets/videos/SAC.mp4">
         <img src="assets/videos/SAC_preview.gif" alt="SAC policy rollout preview">
       </a><br>
-      <a href="assets/videos/SAC.mp4">Open SAC.mp4</a>
+      <a href="assets/videos/SAC.mp4">Watch full SAC rollout</a>
     </td>
   </tr>
 </table>
-
-README 使用 GIF 预览保证 GitHub 页面可直接展示；点击预览图或链接可打开原始 mp4。
 
 ## 仓库结构
 
@@ -253,7 +251,7 @@ PPO 重点关注 episode return/length、value loss、entropy、approximate KL�
 ## 产物管理
 
 - `assets/figures/` 存放 README 展示用的压缩截图或图表。
-- `assets/videos/` 存放 README 展示用的短视频片段和 GIF 预览。
+- `assets/videos/` 存放 README 展示用的短视频片段与 rollout 预览。
 - 大体积训练产物请保存在本地或服务器数据盘，例如 `/root/autodl-tmp/Humanoid-runs/`。
 - checkpoint、replay buffer、raw logs、TensorBoard event 文件和完整视频不进入版本管理。
 
