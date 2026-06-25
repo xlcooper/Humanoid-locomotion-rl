@@ -19,7 +19,7 @@ MaMuJoCo Humanoid 单智能体连续控制实验项目。仓库包含手写 PPO 
 | [`src/`](src/) | 训练、评估、渲染和环境封装代码 |
 | [`results/ppo_sac_summary.md`](results/ppo_sac_summary.md) | PPO/SAC 核心结果摘要 |
 | [`docs/environment.md`](docs/environment.md) | 主要实验环境记录 |
-| [`assets/`](assets/) | README 或展示页面可用的小体积图表、短视频占位目录 |
+| [`assets/`](assets/) | README 和展示页面引用的小体积图表、截图与短视频 |
 | [`requirements.txt`](requirements.txt) | Python 依赖列表 |
 
 ## 结果概览
@@ -69,6 +69,46 @@ mean_length=1000.000
 SAC seed `0` 的 10 个 evaluation episode 全部达到 `1000` step 时间上限，形成了本项目的强 off-policy 对照。该结果来自单 seed，稳定性结论仍以 PPO 三 seed baseline 为主。
 
 视频观察显示，SAC seed `0` 能够稳定移动并获得较高 reward，但姿态明显前倾、屈身，不接近自然人类步态。因此这里将其描述为 reward-driven locomotion，而不是自然步态生成。
+
+## 展示
+
+### TensorBoard
+
+<table>
+  <tr>
+    <td width="50%">
+      <strong>PPO rollout metrics</strong><br>
+      <img src="assets/figures/PPO_tb1.png" alt="PPO TensorBoard episode length, episode return and rolling metrics">
+    </td>
+    <td width="50%">
+      <strong>PPO diagnostics</strong><br>
+      <img src="assets/figures/PPO_tb2.png" alt="PPO TensorBoard losses and policy diagnostics">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>SAC training diagnostics</strong><br>
+      <img src="assets/figures/SAC_tb2.png" alt="SAC TensorBoard actor loss, critic loss and entropy coefficient curves">
+    </td>
+  </tr>
+</table>
+
+### Rollout Videos
+
+<table>
+  <tr>
+    <td width="50%">
+      <strong>PPO</strong><br>
+      <video src="assets/videos/PPO.mp4" controls width="100%"></video><br>
+      <a href="assets/videos/PPO.mp4">Open PPO.mp4</a>
+    </td>
+    <td width="50%">
+      <strong>SAC</strong><br>
+      <video src="assets/videos/SAC.mp4" controls width="100%"></video><br>
+      <a href="assets/videos/SAC.mp4">Open SAC.mp4</a>
+    </td>
+  </tr>
+</table>
 
 ## 仓库结构
 
@@ -206,7 +246,8 @@ PPO 重点关注 episode return/length、value loss、entropy、approximate KL�
 
 ## 产物管理
 
-- `assets/figures/` 与 `assets/videos/` 仅作为展示素材占位目录，当前仓库不包含实际截图或视频文件。
+- `assets/figures/` 存放 README 展示用的压缩截图或图表。
+- `assets/videos/` 存放 README 展示用的短视频片段。
 - 大体积训练产物请保存在本地或服务器数据盘，例如 `/root/autodl-tmp/Humanoid-runs/`。
 - checkpoint、replay buffer、raw logs、TensorBoard event 文件和完整视频不进入版本管理。
 

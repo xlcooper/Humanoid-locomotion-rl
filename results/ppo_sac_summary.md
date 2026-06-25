@@ -77,4 +77,14 @@ mean_length=1000.000
 
 ## 展示素材
 
-`assets/figures/` 与 `assets/videos/` 仅保留展示素材的占位目录。当前仓库不包含实际截图或视频文件；完整训练视频、TensorBoard event 和 raw log 不纳入版本管理。
+README 展示素材位于：
+
+```text
+assets/figures/PPO_tb1.png
+assets/figures/PPO_tb2.png
+assets/figures/SAC_tb2.png
+assets/videos/PPO.mp4
+assets/videos/SAC.mp4
+```
+
+`assets/figures/SAC_tb1.png` 当前与 `PPO_tb2.png` 内容相同，暂不作为结果图展示。完整训练视频、TensorBoard event 和 raw log 不纳入版本管理。
