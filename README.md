@@ -1,6 +1,8 @@
 # Humanoid Locomotion RL
 
-MaMuJoCo Humanoid 单智能体连续控制实验项目。仓库包含手写 PPO baseline、Stable-Baselines3 SAC 对照、复现实验命令、环境记录和结果摘要，适合作为项目展示与复现实验入口。
+Humanoid 是 MuJoCo 中经典的高维连续控制 locomotion 任务。智能体需要通过连续关节力矩控制类人机器人保持平衡并向前移动，训练过程很容易暴露 critic 拟合压力、策略更新不稳定、动作越界和高 reward 行为不自然等问题。
+
+本项目基于 MaMuJoCo Humanoid 构建单智能体控制实验，重点比较手写 PPO baseline 与 Stable-Baselines3 SAC 强基线。实验关注的不只是最终 reward，也包括训练稳定性、动作分布、TensorBoard 诊断曲线和 rollout 视频中的策略行为。
 
 训练产生的 checkpoint、replay buffer、TensorBoard event、raw log 和完整视频体积较大，不纳入版本管理。
 
@@ -159,17 +161,6 @@ python src/check_mamujoco_env.py --partitioning none --steps 5
 
 ## 复现实验
 
-### PPO Smoke Test
-
-```bash
-python src/train_ppo.py \
-  --seed 0 \
-  --total-timesteps 100000 \
-  --run-name ppo_smoke_seed0 \
-  --normalize-observations \
-  --tensorboard
-```
-
 ### PPO Final Baseline
 
 ```bash
@@ -246,12 +237,8 @@ python src/render_sac_sb3.py \
 tensorboard --logdir /root/autodl-tmp/Humanoid-runs --host 0.0.0.0 --port 6006
 ```
 
-PPO 重点关注 episode return/length、value loss、entropy、approximate KL、clip fraction 和 action clipping diagnostics。SAC 中 `rollout/` 曲线反映环境交互表现，`train/` 曲线反映 actor、critic 和 entropy coefficient 的优化过程。
-
 ## 产物管理
 
-- `assets/figures/` 存放 README 展示用的压缩截图或图表。
-- `assets/videos/` 存放 README 展示用的短视频片段与 rollout 预览。
 - 大体积训练产物请保存在本地或服务器数据盘，例如 `/root/autodl-tmp/Humanoid-runs/`。
 - checkpoint、replay buffer、raw logs、TensorBoard event 文件和完整视频不进入版本管理。
 
